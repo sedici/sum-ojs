@@ -27,12 +27,17 @@ upgrade3.2:
 	@echo "Running upgrade to OJS 3.2 for $(PROJECT_NAME)..."
 	./upgrader -o upgrade -f 3.1 -t 3.2
 
-regenerate3.3:
-	from3.2-to-3.3/upgrader -o up 
-	from3.2-to-3.3/upgrader -o regenerate 
-upgrade3.3:
-	from3.2-to-3.3/upgrader -o upgrade
+up3.3:
+	./upgrader -o up -f 3.2 -t 3.3
 
+down3.3:
+	./upgrader -o up -f 3.2 -t 3.3
+
+regenerate3.3:
+	./upgrader -o up -f 3.2 -t 3.3
+	./upgrader -o regenerate -f 3.2 -t 3.3
+upgrade3.3:
+	./upgrader -o upgrade -f 3.2 -t 3.3
 
 
 regenerate:
