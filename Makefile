@@ -12,18 +12,39 @@ up:
 	@docker-compose up
 
 down:
-	@docker-compose up
+	@docker-compose  down
+
+up3.2:
+	./upgrader -o up -f 3.1 -t 3.2
+
+down3.2:
+	./upgrader -o down -f 3.1 -t 3.2
+
+regenerate3.2:
+	./upgrader -o regenerate -f 3.1 -t 3.2
+
+upgrade3.2:
+	@echo "Running upgrade to OJS 3.2 for $(PROJECT_NAME)..."
+	./upgrader -o upgrade -f 3.1 -t 3.2
+
+regenerate3.3:
+	from3.2-to-3.3/upgrader -o up 
+	from3.2-to-3.3/upgrader -o regenerate 
+upgrade3.3:
+	from3.2-to-3.3/upgrader -o upgrade
+
+
 
 regenerate:
 	@echo "Dropping database $(PROJECT_NAME)"
 	docker exec -it $(PROJECT_NAME)_mysql  mysqladmin drop $(DATABASE_NAME) -uroot -p$(ROOT_PASSWORD)
-	@echo "Generating database $(PROJECT_NAME)"
+	@echo "Creating database $(PROJECT_NAME)"
 	docker exec -it $(PROJECT_NAME)_mysql mysqladmin create $(DATABASE_NAME) -uroot -p$(ROOT_PASSWORD)
+	@echo "Loading dump file $(DUMP_DIR)/$(DUMP_FILE) into database $(DATABASE_NAME)"
 	docker exec -w $(DUMP_DIR) -it $(PROJECT_NAME)_mysql sh -c "cd $(DUMP_DIR) && mysql -uroot -p$(ROOT_PASSWORD) $(DATABASE_NAME) < ./$(DUMP_FILE)"
-
-upgrade:
-	@echo "Running upgrade for $(PROJECT_NAME)..."
-	docker exec -it $(PROJECT_NAME)_web sh -c "cd /app && php tools/upgrade.php upgrade" 
+	@echo "Running extra queries from $(DUMP_DIR)/extra-queries.sql file into database $(DATABASE_NAME)"
+	docker exec -w $(DUMP_DIR) -it $(PROJECT_NAME)_mysql sh -c "cd $(DUMP_DIR) && mysql -uroot -p$(ROOT_PASSWORD) $(DATABASE_NAME) < ./extra-queries.sql"
+	@echo "Database $(DATABASE_NAME) has been recreated. All done."
 
 backup:
 	docker exec -w $(DUMP_DIR) -it $(PROJECT_NAME)_mysql sh -c "cd $(DUMP_DIR) && mysqldump -uroot -p$(ROOT_PASSWORD) $(DATABASE_NAME) > $(DATABASE_NAME)_backup.sql"
@@ -33,3 +54,4 @@ bash-mysql:
 
 bash-php:
 	docker exec -it $(PROJECT_NAME)_web /bin/bash
+

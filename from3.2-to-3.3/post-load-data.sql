@@ -1,0 +1,38 @@
+-- QUERIES PARA EJECUTAR ANTES DE MIGRAR DESDE 3.2 a 3.3
+ DELETE FROM authors WHERE publication_id IS NULL;
+
+ ALTER TABLE ojsunlp.categories ENGINE=MyISAM;                               
+ ALTER TABLE ojsunlp.category_settings ENGINE=MyISAM;                        
+ ALTER TABLE ojsunlp.counter_monthly_log ENGINE=MyISAM;                      
+ ALTER TABLE ojsunlp.deposit_point_settings ENGINE=MyISAM;                   
+ ALTER TABLE ojsunlp.deposit_points ENGINE=MyISAM;                           
+ ALTER TABLE ojsunlp.email_templates_settings ENGINE=MyISAM;                 
+ ALTER TABLE ojsunlp.genre_settings ENGINE=MyISAM;                           
+ ALTER TABLE ojsunlp.genres ENGINE=MyISAM;                                   
+ ALTER TABLE ojsunlp.item_views ENGINE=MyISAM;                               
+ ALTER TABLE ojsunlp.library_file_settings ENGINE=MyISAM;                    
+ ALTER TABLE ojsunlp.library_files ENGINE=MyISAM;                            
+ ALTER TABLE ojsunlp.navigation_menu_item_assignment_settings ENGINE=MyISAM; 
+ ALTER TABLE ojsunlp.navigation_menu_item_assignments ENGINE=MyISAM;         
+ ALTER TABLE ojsunlp.navigation_menu_item_settings ENGINE=MyISAM;            
+ ALTER TABLE ojsunlp.navigation_menu_items ENGINE=MyISAM;                    
+ ALTER TABLE ojsunlp.navigation_menus ENGINE=MyISAM;                         
+ ALTER TABLE ojsunlp.publication_categories ENGINE=MyISAM;                   
+ ALTER TABLE ojsunlp.publication_galley_settings ENGINE=MyISAM;              
+ ALTER TABLE ojsunlp.publication_galleys ENGINE=MyISAM;                      
+ ALTER TABLE ojsunlp.publication_settings ENGINE=MyISAM;                     
+ ALTER TABLE ojsunlp.publications ENGINE=MyISAM;                             
+ ALTER TABLE ojsunlp.queries ENGINE=MyISAM;                                  
+ ALTER TABLE ojsunlp.query_participants ENGINE=MyISAM;                       
+ ALTER TABLE ojsunlp.review_files ENGINE=MyISAM;                             
+ ALTER TABLE ojsunlp.review_round_files ENGINE=MyISAM;                       
+ ALTER TABLE ojsunlp.stage_assignments ENGINE=MyISAM;                        
+ ALTER TABLE ojsunlp.submission_artwork_files ENGINE=MyISAM; 
+ ALTER TABLE ojsunlp.submission_file_revisions ENGINE=MyISAM;                 
+ ALTER TABLE ojsunlp.submission_file_settings ENGINE=MyISAM;                 
+ ALTER TABLE ojsunlp.submission_supplementary_files ENGINE=MyISAM;           
+ ALTER TABLE ojsunlp.submission_tombstones ENGINE=MyISAM;                    
+ ALTER TABLE ojsunlp.user_group_settings ENGINE=MyISAM;                      
+ ALTER TABLE ojsunlp.user_group_stage ENGINE=MyISAM;                         
+ ALTER TABLE ojsunlp.user_groups ENGINE=MyISAM;                              
+ ALTER TABLE ojsunlp.user_user_groups ENGINE=MyISAM;    
