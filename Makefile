@@ -48,7 +48,7 @@ regenerate:
 	@echo "Loading dump file $(DUMP_DIR)/$(DUMP_FILE) into database $(DATABASE_NAME)"
 	docker exec -w $(DUMP_DIR) -it $(PROJECT_NAME)_mysql sh -c "cd $(DUMP_DIR) && mysql -uroot -p$(ROOT_PASSWORD) $(DATABASE_NAME) < ./$(DUMP_FILE)"
 	@echo "Running extra queries from $(DUMP_DIR)/extra-queries.sql file into database $(DATABASE_NAME)"
-	docker exec -w $(DUMP_DIR) -it $(PROJECT_NAME)_mysql sh -c "cd $(DUMP_DIR) && mysql -uroot -p$(ROOT_PASSWORD) $(DATABASE_NAME) < ./extra-queries.sql"
+	docker exec -w $(DUMP_DIR) -it $(PROJECT_NAME)_mysql sh -c "cd $(DUMP_DIR) && mysql -uroot -p$(ROOT_PASSWORD) $(DATABASE_NAME) < ./$(POST_DUMP_FILE)"
 	@echo "Database $(DATABASE_NAME) has been recreated. All done."
 
 backup:
