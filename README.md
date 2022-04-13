@@ -1,5 +1,6 @@
-# script-ojs
-Scripts para la gestion, migración y actualizacion de instancias de OJS
+# SUM-OJS | Scripts for upgrades and migrations of OJS 
+
+SUM-OJS propone unos scripts que, apoyados sobre un stack basado en contenedores docker, permiten agilizar las tareas de gestion, migración y actualizacion de instancias de OJS
 
 
 Uso
