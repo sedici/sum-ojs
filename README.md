@@ -39,7 +39,7 @@ Antes de realizar la migración, este directorio debe contener los archivos list
 
 - Copiar en el directorio from-X-to-Y/sql el archivo con el dump completo de la base de datos del OJS versión X . El nombre del archivo debe ser el especificado previamente en la variable DUMP_FILE:
 
-- En caso de ser necesario, copiar en el directorio from-X-to-Y/sql el archivo que contenga los comandos SQL a ejecutarse luego de importar la base de datos original, y antes de ejecutar la actualización hacia la versión Y. El nombre de este archiv odebe ser e lespecificado previamente en la variable POST_DUMP_FILE
+- En caso de ser necesario, copiar en el directorio from-X-to-Y/sql el archivo que contenga los comandos SQL a ejecutarse luego de importar la base de datos original, y antes de ejecutar la actualización hacia la versión Y. El nombre de este archivo debe ser el especificado previamente en la variable POST_DUMP_FILE
 
 - Asegurarse que el stack definido en el archivo from-X-to-Y/docker-compose.yml cumple con los requerimientos para ejecutar OJS versión Y. En particular, debe observarse que la versión de PHP sea adecuada en la línea "image: webdevops/php-apache-dev:PHP_VERSION" 
 
