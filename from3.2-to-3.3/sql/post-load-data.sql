@@ -1,38 +1,8 @@
 -- QUERIES PARA EJECUTAR ANTES DE MIGRAR DESDE 3.2 a 3.3
- DELETE FROM authors WHERE publication_id IS NULL;
+DELETE FROM authors WHERE publication_id IS NULL;
 
- ALTER TABLE categories ENGINE=MyISAM;                               
- ALTER TABLE category_settings ENGINE=MyISAM;                        
- ALTER TABLE counter_monthly_log ENGINE=MyISAM;                      
- ALTER TABLE deposit_point_settings ENGINE=MyISAM;                   
- ALTER TABLE deposit_points ENGINE=MyISAM;                           
- ALTER TABLE email_templates_settings ENGINE=MyISAM;                 
- ALTER TABLE genre_settings ENGINE=MyISAM;                           
- ALTER TABLE genres ENGINE=MyISAM;                                   
- ALTER TABLE item_views ENGINE=MyISAM;                               
- ALTER TABLE library_file_settings ENGINE=MyISAM;                    
- ALTER TABLE library_files ENGINE=MyISAM;                            
- ALTER TABLE navigation_menu_item_assignment_settings ENGINE=MyISAM; 
- ALTER TABLE navigation_menu_item_assignments ENGINE=MyISAM;         
- ALTER TABLE navigation_menu_item_settings ENGINE=MyISAM;            
- ALTER TABLE navigation_menu_items ENGINE=MyISAM;                    
- ALTER TABLE navigation_menus ENGINE=MyISAM;                         
- ALTER TABLE publication_categories ENGINE=MyISAM;                   
- ALTER TABLE publication_galley_settings ENGINE=MyISAM;              
- ALTER TABLE publication_galleys ENGINE=MyISAM;                      
- ALTER TABLE publication_settings ENGINE=MyISAM;                     
- ALTER TABLE publications ENGINE=MyISAM;                             
- ALTER TABLE queries ENGINE=MyISAM;                                  
- ALTER TABLE query_participants ENGINE=MyISAM;                       
- ALTER TABLE review_files ENGINE=MyISAM;                             
- ALTER TABLE review_round_files ENGINE=MyISAM;                       
- ALTER TABLE stage_assignments ENGINE=MyISAM;                        
- ALTER TABLE submission_artwork_files ENGINE=MyISAM; 
- ALTER TABLE submission_file_revisions ENGINE=MyISAM;                 
- ALTER TABLE submission_file_settings ENGINE=MyISAM;                 
- ALTER TABLE submission_supplementary_files ENGINE=MyISAM;           
- ALTER TABLE submission_tombstones ENGINE=MyISAM;                    
- ALTER TABLE user_group_settings ENGINE=MyISAM;                      
- ALTER TABLE user_group_stage ENGINE=MyISAM;                         
- ALTER TABLE user_groups ENGINE=MyISAM;                              
- ALTER TABLE user_user_groups ENGINE=MyISAM;    
+ALTER TABLE submission_files ENGINE=InnoDB; 
+
+UPDATE `plugin_settings` SET `setting_value` = 'a:5:{i:0;s:4:\"UNLP\";i:2;s:6:\"SEDICI\";i:3;s:11:\"Informacion\";i:4;s:11:\"DORA_MEXICO\";i:5;s:11:\"suscripcion\";}' WHERE `plugin_settings`.`plugin_name` = 'customblockmanagerplugin' AND `plugin_settings`.`context_id` = 31 AND `plugin_settings`.`setting_name` = 'blocks'; 
+
+DROP TABLE `catplug_categories`, `catplug_category_journal`, `catplug_category_settings`;
