@@ -12,7 +12,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: ${PROJECT_NAME}
-      MYSQL_PASSWORD: root
+      MYSQL_PASSWORD: ${ROOT_PASSWORD}
   phpmyadmin:
     depends_on:
       - mysql
