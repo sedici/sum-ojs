@@ -28,7 +28,6 @@ down3.3:
 	./upgrader -o up -f 3.2 -t 3.3
 
 regenerate3.3:
-	./upgrader -o up -f 3.2 -t 3.3
 	./upgrader -o regenerate -f 3.2 -t 3.3
 
 upgrade3.3:
