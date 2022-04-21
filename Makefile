@@ -1,5 +1,8 @@
 include .env
 
+from=2.4
+to=3.3
+
 export
 .PHONY: regenerate upgrade backup
 
@@ -8,30 +11,15 @@ default: status
 status:
 	docker ps
 
-up3.2:
-	./upgrader -o up -f 3.1 -t 3.2
+up:
+	./upgrader -o up -f $(from) -t $(to)
 
-down3.2:
-	./upgrader -o down -f 3.1 -t 3.2
+regenerate:
+	./upgrader -o regenerate -f $(from) -t $(to)
 
-regenerate3.2:
-	./upgrader -o regenerate -f 3.1 -t 3.2
-
-upgrade3.2:
-	@echo "Running upgrade to OJS 3.2 for $(PROJECT_NAME)..."
-	./upgrader -o upgrade -f 3.1 -t 3.2
-
-up3.3:
-	./upgrader -o up -f 3.2 -t 3.3
-
-down3.3:
-	./upgrader -o up -f 3.2 -t 3.3
-
-regenerate3.3:
-	./upgrader -o regenerate -f 3.2 -t 3.3
-
-upgrade3.3:
-	./upgrader -o upgrade -f 3.2 -t 3.3
+upgrade:
+	@echo "Running upgrade to OJS from ${from} to ${to} for $(PROJECT_NAME)..."
+	./upgrader -o upgrade -f $(from) -t $(to)
 
 backup:
 	docker exec -w $(DUMP_DIR) -it $(PROJECT_NAME)_mysql sh -c "cd $(DUMP_DIR) && mysqldump -uroot -p$(ROOT_PASSWORD) $(DATABASE_NAME) > $(DATABASE_NAME)_backup.sql"
