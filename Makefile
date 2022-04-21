@@ -20,6 +20,8 @@ regenerate:
 upgrade:
 	@echo "Running upgrade to OJS from ${from} to ${to} for $(PROJECT_NAME)..."
 	./upgrader -o upgrade -f $(from) -t $(to)
+down:
+	./upgrader -o down -f ${from} -t ${to}
 
 backup:
 	docker exec -w $(DUMP_DIR) -it $(PROJECT_NAME)_mysql sh -c "cd $(DUMP_DIR) && mysqldump -uroot -p$(ROOT_PASSWORD) $(DATABASE_NAME) > $(DATABASE_NAME)_backup.sql"
