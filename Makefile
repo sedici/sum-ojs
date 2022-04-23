@@ -9,7 +9,7 @@ export
 default: status
 
 status:
-	docker ps
+	docker ps | grep $(PROJECT_NAME)
 
 up:
 	./upgrader -o up -f $(from) -t $(to)
