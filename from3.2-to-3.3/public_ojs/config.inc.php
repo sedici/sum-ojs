@@ -26,10 +26,10 @@
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
-installed = Off
+installed = On
 
 ; The canonical URL to the OJS installation (excluding the trailing slash)
-base_url = "http://localhost:80"
+base_url = "http://localhost"
 
 ; Enable strict mode. This will more aggressively cause errors/warnings when
 ; deprecated behaviour exists in the codebase.
@@ -60,7 +60,7 @@ scheduled_tasks = Off
 ; time zones.
 ; I.e.: "Europe/Amsterdam"
 ; time_zone="Europe/Amsterdam"
-time_zone = "UTC"
+time_zone = America/Argentina/Buenos_Aires
 
 ; Short and long date formats
 date_format_short = "Y-m-d"
@@ -97,7 +97,7 @@ restful_urls = Off
 ; An empty string indicates that all hosts should be trusted (not recommended!)
 ; Example:
 ; allowed_hosts = '["myjournal.tld", "anotherjournal.tld", "mylibrary.tld"]'
-allowed_hosts = ''
+allowed_hosts = "[\"localhost\"]"
 
 ; Allow the X_FORWARDED_FOR header to override the REMOTE_ADDR as the source IP
 ; Set this to "On" if you are behind a reverse proxy and you control the X_FORWARDED_FOR
@@ -143,8 +143,8 @@ user_validation_period = 28
 
 driver = mysqli
 host = mysql
-username = root
-password = root
+username = ojs
+password = ojspassword
 name = ojs
 
 ; Set the non-standard port and/or socket, if used
@@ -199,7 +199,7 @@ web_cache_hours = 1
 [i18n]
 
 ; Default locale
-locale = en
+locale = es
 
 ; Database connection character set
 connection_charset = utf8
@@ -214,7 +214,7 @@ connection_charset = utf8
 ; Complete path to directory to store uploaded files
 ; (This directory should not be directly web-accessible)
 ; Windows users should use forward slashes
-files_dir = /var/ojs-data/uploads
+files_dir = /var/ojs-data
 
 ; Path to the directory to store public uploaded files
 ; (This directory should be web-accessible and the specified path
@@ -401,7 +401,7 @@ oai = On
 
 ; OAI Repository identifier. This setting forms part of OAI-PMH record IDs.
 ; Changing this setting may affect existing clients and is not recommended.
-repository_id = ojs.pkp.sfu.ca
+repository_id = "ojs2.localhost"
 
 ; Maximum number of records per request to serve via OAI
 oai_max_records = 100

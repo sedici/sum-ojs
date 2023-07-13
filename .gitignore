@@ -1,2 +1,3 @@
 load-data.sql
 data/*
+from3.2-to-3.3/public_ojs/cache/*
