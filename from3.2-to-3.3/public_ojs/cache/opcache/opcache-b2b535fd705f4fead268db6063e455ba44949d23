@@ -1,0 +1,16 @@
+<?php $exp = 1720875571; $val = array (
+  'domain' => NULL,
+  'plural-forms' => 'nplurals=2; plural=n != 1;',
+  'messages' => 
+  array (
+    '' => 
+    array (
+      'author.submit' => 'Шинэ бүтээл илгээх',
+      'author.track' => 'Идэвхтэй бүтээлүүд',
+      'author.competingInterests' => 'Өрсөлдөх сонирхолууд <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">ӨС- Бодлого</a>',
+      'author.submit.submitArticle' => 'Бүтээлээ илгээх',
+      'author.submit.stepsToSubmit' => 'Бүтээл илгээх 5-н алхамтай',
+      'author.submit.startHereTitle' => 'Шинэ бүтээл илгээхийг эхлүүлэх',
+    ),
+  ),
+);

@@ -1,0 +1,60 @@
+<?php $exp = 1720875567; $val = array (
+  'domain' => NULL,
+  'plural-forms' => 'nplurals=2; plural=n != 1;',
+  'messages' => 
+  array (
+    '' => 
+    array (
+      'plugins.importexport.crossref.displayName' => 'Mòdul d\'exportació XML de Crossref',
+      'plugins.importexport.crossref.description' => 'Exportar les metadades de l\'article en format XML de Crossref.',
+      'plugins.importexport.crossref.cliUsage' => 'Ús:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
+',
+      'plugins.importexport.crossref.requirements' => 'Requisits',
+      'plugins.importexport.crossref.requirements.satisfied' => 'Tots els requisits del mòdul han estat satisfets.',
+      'plugins.importexport.crossref.settings.form.username' => 'Nom d\'usuari',
+      'plugins.importexport.crossref.settings.depositorIntro' => 'Els següents elements són obligatoris per a un dipòsit Crossref amb èxit.',
+      'plugins.importexport.crossref.settings.form.depositorName' => 'Nom del dipositant',
+      'plugins.importexport.crossref.settings.form.depositorEmail' => 'Correu electrònic del dipositant',
+      'plugins.importexport.crossref.settings.form.depositorNameRequired' => 'Introduïu el nom del dipositant.',
+      'plugins.importexport.crossref.settings.form.depositorEmailRequired' => 'Introduïu el correu electrònic del dipositant.',
+      'plugins.importexport.crossref.senderTask.name' => 'Tasca de registre automàtic de Crossref',
+      'plugins.importexport.crossref.export.error.articleNotFound' => 'Cap article coincideix amb l\'identificador "{$articleId}".',
+      'plugins.importexport.crossref.export.error.issueNotFound' => 'Cap número coincideix amb l\'identificador "{$issueId}".',
+      'plugins.importexport.crossref.register.success.warning' => 'El registre s\'ha fet correctament però s\'ha produït la següent advertència: \'{$param}\'.',
+      'plugins.importexport.crossref.register.error.mdsError' => 'El registre no ha estat correcte del tot! El servidor de registre de DOI ha donat un error.',
+      'plugins.importexport.crossref.action.markRegistered' => 'Marcar com a actiu',
+      'plugins.importexport.crossref.action.export' => 'Exportar',
+      'plugins.importexport.crossref.statusLegend' => '
+		<p>Estat del dipòsit:</p>
+		<p>
+		- No dipositat: no s\'ha fet cap intent de dipòsit per a aquest DOI.<br />
+		- Actiu: el DOI ha estat dipositat i s\'està resolent correctament.<br />
+		- Error: el dipòsti del DOI ha fallat.<br />
+		- Marcat com a actiu: el DOI ha estat marcat manualment com a actiu.
+		</p>
+		<p>Només es mostra l\'estat de l\'últim intent de dipòsit.</p>
+		<p>Si un dipòsit falla, procureu solucionar el problema i intenteu registrar el DOI de nou.</p>',
+      'plugins.importexport.crossref.action.register' => 'Dipositar',
+      'plugins.importexport.crossref.status.markedRegistered' => 'Marcats com a actius',
+      'plugins.importexport.crossref.status.registered' => 'Actius',
+      'plugins.importexport.crossref.status.failed' => 'Ha fallat',
+      'plugins.importexport.crossref.issues.description' => 'Nota: Aquí només es tindran en compte per a exportació/registre els números (no els seus articles).',
+      'plugins.importexport.crossref.settings.form.validation' => 'Validar XML. Utilitzeu aquesta opció per descarregar el XML per fer el registre manual de DOI.',
+      'plugins.importexport.crossref.settings.form.testMode.description' => 'Utilitzar la API de prova de Crossref (entorn de prova) per dipositar els DOI. No us oblideu de treure aquesta opció en l\'entorn de producció.',
+      'plugins.importexport.crossref.settings.form.automaticRegistration.description' => 'OJS dipositarà els DOI assignats automàticament a Crossref. Heu de tenir en compte que això pot trigar una mica després del procés de publicació (per exemple, segons la configuració de les tasques cron). Podeu comprovar tots els DOI no registrats.',
+      'plugins.importexport.crossref.settings.form.usernameRequired' => 'Introduïu el nom d\'usuari/ària obtingut des de Crossref.',
+      'plugins.importexport.crossref.registrationIntro' => 'Si voleu utilitzar aquest mòdul per registrar identificadors d\'objectes digitals (DOI) directament amb Crossref necessitareu un nom d\'usuari/ària i una contrasenya (disponible a <a href="http://www.crossref.org" target="_blank">Crossref</a>). Encara que no en tingueu podreu exportar en format Crossref XML, però no podreu registrar els vostres DOI amb Crossref directament des de OJS.',
+      'plugins.importexport.crossref.error.noDOIContentObjects' => 'Els articles no estan seleccionats per assignar-los un número de DOI en el mòdul d\'identificador públic DOI, per tant aquest mòdul no pot depositar ni exportar res.',
+      'plugins.importexport.crossref.error.issnNotConfigured' => 'No s\'ha configurat cap ISSN per a la revista! Heu d\'afegir un ISSN a la <a href="{$journalSettingsUrl}" target="_blank">pàgina de configuració de la revista</a>.',
+      'plugins.importexport.crossref.error.publisherNotConfigured' => 'No s\'ha configurat cap editorial per a la revista! Heu d\'afegir una institució editorial a la <a href="{$journalSettingsUrl}" target="_blank">pàgina de configuració de la revista</a>.',
+      'plugins.importexport.crossref.settings.form.onlyValidateExport' => 'Només validar l\'exportació. No descarregar l\'arxiu.',
+      'plugins.generic.crossref.registrationAgency.name' => 'Crossref',
+      'plugins.importexport.crossref.status.notDeposited' => 'No dipositat',
+      'plugins.importexport.crossref.settings' => 'Configuració de Crossref',
+      'plugins.generic.crossref.displayName' => 'Mòdul de gestió de Crossref',
+      'plugins.generic.crossref.description' => 'Gestiona el dipòsit i l\'exportació de les metadades de Crossref',
+    ),
+  ),
+);

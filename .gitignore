@@ -1,3 +1,2 @@
 load-data.sql
-private_ojs/*
-public_ojs/*
+data/*

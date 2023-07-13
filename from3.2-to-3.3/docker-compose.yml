@@ -26,7 +26,7 @@ services:
       - '8080:80'
   web:
    #for OJS 3.3 and 3.2
-    image: webdevops/php-apache-dev:7.4
+    image: webdevops/php-apache-dev:8.0
     container_name: ${PROJECT_NAME}_web
     depends_on:
       - mysql

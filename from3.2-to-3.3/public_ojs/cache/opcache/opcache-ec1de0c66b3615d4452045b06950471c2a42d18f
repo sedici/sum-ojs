@@ -1,0 +1,89 @@
+<?php $exp = 1720875573; $val = array (
+  'domain' => NULL,
+  'plural-forms' => 'nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;',
+  'messages' => 
+  array (
+    '' => 
+    array (
+      'emails.submissionAck.subject' => 'Подяка за подання рукопису',
+      'emails.submissionAck.body' => '{$recipientName}:<br />
+<br />
+Дякуємо, що надіслали рукопис &quot;{$submissionTitle}&quot; для публікації у виданні &quot;{$contextName}&quot;. Електронна система управління журналом, яку ми використовуємо, дозволяє авторам відслідковувати редакційне опрацювання поданих до друку рукописів. Для цього потрібно увійти на веб-сайт журналу зі своїм іменем користувача:<br />
+<br />
+URL рукопису: {$submissionUrl}<br />
+Ім\'я користувача: {$recipientUsername}<br />
+<br />
+Якщо Ви маєте запитання, будь ласка, звертайтеся до мене. Дякую за вибір цього журналу як місця публікації своєї роботи.<br />
+<br />
+{$contextSignature}',
+      'emails.reviewAck.subject' => 'Подяка за рецензування статті',
+      'emails.reviewAck.body' => '{$recipientName}:<br />
+<br />
+Дякую за закінчення рецензування подання &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Ми цінуємо Ваш внесок у контроль якості роботи, поданої нам для публікації.',
+      'emails.editorDecisionSendToExternal.subject' => 'Рішення Редакції',
+      'emails.editorDecisionSendToExternal.body' => '{$authors}:<br />
+<br />
+Ми прийняли рішення щодо вашого Подання до {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Наше рішення: Відправити на Рецензування<br />
+<br />
+URL Подання: {$submissionUrl}',
+      'emails.editorDecisionSendToProduction.subject' => 'Рішення Редакції',
+      'emails.editorDecisionSendToProduction.body' => '{$authors}:<br />
+<br />
+Редагування вашого подання &quot;{$submissionTitle},&quot; завершено. Ми надсилаємо його на публікацію.<br />
+<br />
+URL Подання: {$submissionUrl}',
+      'emails.editorDecisionRevisions.subject' => 'Рішення редактора',
+      'emails.editorDecisionRevisions.body' => 'Шановний|Шановна {$authors}:<br />
+<br />
+Ми прийняли рішення стосовно Вашого подання "{$submissionTitle}" до видання "{$contextName}".<br />
+<br />
+Наше рішення: Необхідні Виправлення',
+      'emails.editorDecisionResubmit.subject' => 'Рішення редактора',
+      'emails.editorDecisionResubmit.body' => 'Шановний|Шановна {$authors}:<br />
+<br />
+Ми прийняли рішення стосовно Вашого подання"{$submissionTitle}" до видання "{$contextName}".<br />
+<br />
+Наше рішення: Відправити на повторне рецензування',
+      'emails.editorDecisionDecline.subject' => 'Рішення редактора',
+      'emails.editorDecisionDecline.body' => 'Шановний|Шановна {$authors}:<br />
+<br />
+Ми прийняли рішення стосовно Вашого подання "{$submissionTitle}" до видання "{$contextName}".<br />
+<br />
+Наше рішення: Відмовити у поданні',
+      'emails.editorRecommendation.subject' => 'Рекомендації Редактора',
+      'emails.editorRecommendation.body' => '{$editors}:<br />
+<br />
+Щодо подання {$submissionTitle}, надісланому до {$contextName}, можу рекомендувати наступне: {$recommendation}',
+      'emails.copyeditRequest.subject' => 'Запит на літературне редагування',
+      'emails.copyeditRequest.body' => '{$recipientName}:<br />
+<br />
+Я хотів би попросити Вас здійснити літературне редагування тексту &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;, виконавши наступні кроки:<br />
+1. Натисніть на вказаній нижче адресі URL подання.<br />
+2. Увійдіть на сайт журналу та натисніть на посиланні &quot;Файл&quot; кроку 1.<br />
+3. Ознайомтеся з опублікованими на веб-сайті інструкціями з літературного редагування.<br />
+4. Відкрийте завантажений файл та відредагуйте його, додаючи у текст в разі потреби запити до автора.<br />
+5. Збережіть відредагований файл та вивантажте його на крок 1 літературного редагування.<br />
+6. Повідомте листом редактора про закінчення роботи.<br />
+<br />
+URL видання &quot;{$contextName}&quot;: <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL подання: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Ім\'я користувача: {$recipientUsername}',
+      'emails.reviewConfirm.subject' => 'Погоджуюсь здійснити рецензування',
+      'emails.reviewConfirm.body' => '{$recipientName}:<br />
+<br />
+Я маю можливість та бажання працювати над рецензією подання &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Дякую за довіру. Я планую закінчити роботу над рецензією не пізніше {$reviewDueDate}.<br />
+<br />
+{$senderName}',
+      'emails.submissionAckNotAuthor.subject' => 'Подяка за подання рукопису',
+      'emails.submissionAckNotAuthor.body' => 'Вітаємо,<br />
+<br />
+Користувач {$submitterName} подав рукопис, &quot;{$submissionTitle}&quot; {$contextName}. <br />
+<br />
+Якщо у вас є якісь питання, будь ласка, зв\'яжіться зі мною. Дякуємо, що розглянули цей журнал як місце для публікації вашої роботи.<br />
+<br />
+{$contextSignature}',
+    ),
+  ),
+);

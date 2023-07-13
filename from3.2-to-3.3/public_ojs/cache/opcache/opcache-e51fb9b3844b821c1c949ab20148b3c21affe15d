@@ -1,0 +1,341 @@
+<?php $exp = 1720875568; $val = array (
+  'domain' => NULL,
+  'plural-forms' => NULL,
+  'messages' => 
+  array (
+    '' => 
+    array (
+      'emails.passwordResetConfirm.subject' => 'تائیدیه دوباره تنظیم کردن رمزعبور',
+      'emails.passwordResetConfirm.body' => 'درخواستی مبنی بر تنظیم دوباره رمزعبور شما مربوط به وب سایت &amp;lt;{$siteTitle}&amp;gt; به ما رسیده است.<br />
+<br />
+لطفا چنانچه شما این درخواست را نفرستاده اید، به این ایمیل توجهی نکنید، در این صورت رمز عبور شما تغییری نخواهد کرد. اگر مایل به تنظیم دوباره رمزعبور خود هستید، برروی پیوند زیر کلیک نمائید.<br />
+<br />
+تنظیم مجدد رمز عبور: {$lostPasswordUrl}<br />
+<br />
+{$siteContactName}',
+      'emails.userRegister.subject' => 'ثبت نام کاربر جدید',
+      'emails.userRegister.body' => 'برای ثبت نام در {$contextName} از شما سپاسگزارم. لطفا نام کاربری و رمز عبور خود را که برای ورود به وب سایت این مجله مورد نیاز می باشد به خاطر بسپارید.<br />
+<br />
+نام کاربری: {$recipientUsername}<br />
+رمز عبور: {$password}<br />
+<br />
+<br />
+باتشکر<br />
+{$signature}',
+      'emails.userValidateContext.subject' => 'حساب کاربری خود را تایید کنید',
+      'emails.userValidateContext.body' => '{$recipientName}<br />
+<br />
+حساب کاربری شما برای مجله {$contextName}, ایجاد شد. قبل از استفاده می بایست آن را تایید کنید. برای انجام این کار فقط کافی است که بر روی لینک زیر کلیک کنید:<br />
+<br />
+<a href="{$activateUrl}">{$activateUrl}</a><br />
+<br />
+با تشکر<br />
+{$contextSignature}',
+      'emails.reviewerRegister.subject' => 'ثبت نام به عنوان کارشناس {$contextName}',
+      'emails.reviewerRegister.body' => 'با توجه با تجارب جنابعالی, {$contextName} فرصت را مغتنم شمرده و نام شما را در زمره کارشناسان مجله ثبت کرده است. لازم به تذکر است که صرف این عمل هیچگونه مسئولیت و تعهدی را متوجه جنابعالی نمی سازد و فقط ما را قادر می سازد تا جهت ارسال مقاله برای کارشناسی احتمالی توسط جنابعالی براحتی با شما تماس بگیریم. هنگامی که از شما برای انجام کارشناسی یک مقاله دعوت به عمل می آید شما مختار خواهید بود که پس از دیدن عنوان و چکیده مقاله دعوت را بپذیرید یا از انجام کارشناسی خودداری کنید. بعلاوه در هر زمان که اراده کنید میتوانید از ما بخواهید تا نام شما را از لیست کارشناسان مجله حذف کنیم.<br />
+<br />
+نام کاربری و رمز عبور شما برای سایت مجله که جهت انجام تمام امورات آنلاین با این مجله لازم است در زیر آمده است.<br />
+<br />
+نام کاربری: {$recipientUsername}<br />
+رمز عبور: {$password}<br />
+<br />
+با تشکر,<br />
+{$signature}',
+      'emails.issuePublishNotify.subject' => 'شماره جدید چاپ شد',
+      'emails.issuePublishNotify.body' => 'خوانندگان گرامی:<br />
+<br />
+{$contextName}، آخرین شماره خود را به نشانی &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; چاپ کرده است. از شما دعوت میشود که پس از ملاحظه فهرست عناوین از وب سایت مجله حاوی مقاله ها و موضوع های مورد علاقه بازدید کنید.<br />
+<br />
+از توجه همیشگی مستمر شما نسبت به این مجله متشکریم.<br />
+{$signature}',
+      'emails.editorAssign.subject' => 'تعیین کارشناس مسئول',
+      'emails.editorAssign.body' => '{$recipientName}:<br />
+<br />
+شما به عنوان کارشناس مسئول مقاله ضضض مربوط به {$contextName} انتخاب شده اید تا بر مراحل ویرایش آن نظارت داشته باشید.<br />
+<br />
+آدرس مقاله: {$submissionUrl}<br />
+نام کاربری: {$recipientUsername}<br />
+<br />
+متشکرم',
+      'emails.reviewRequest.subject' => 'درخواست کارشناسی مقاله',
+      'emails.reviewRequest.body' => '{$recipientName}:<br />
+<br />
+شما به عنوان یک کارشناس ممتاز برای بررسی مقاله &quot;{$submissionTitle}&quot;که برای {$contextName} ارسال شده است انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید<br />
+<br />
+لطفا قبل از تاریخ &quot;{$responseDueDate}&quot; وارد وب سایت مجله شده و مشخص کنید که آیا مایل به قبول کارشناسی مقاله هستید یا خیر. همچنین به طور همزمان می توانید به مقاله ارسالی دسترسی پیدا کرده و متن کارشناسی و توصیه های خودرا ذخیره کنید. آدرس وب سایت مجله <a href="{$contextUrl}">{$contextUrl}</a> است.<br />
+<br />
+ضمنا آخرین مهلت بررسی این مقاله تا تاریخ &quot;{$reviewDueDate}&quot; می باشد<br />
+<br />
+چنانچه نام کاربری و رمز عبور خود مربوط به وب سایت این مجله را در دسترس ندارید می توانید از پیوند زیر جهت تنظیم دوباره رمزعبور خود استفاده کنید (که به همراه نام کاربری برایتان ارسال می گردد).<br />
+<br />
+<a href="{$passwordLostUrl}">{$passwordLostUrl}</a><br />
+آدرس مقاله : <a href="{$reviewAssignmentUrl}">{$reviewAssignmentUrl}</a><br />
+<br />
+از توجه شما به این درخواست سپاسگزاری می کنم.<br />
+<br />
+{$signature}',
+      'emails.reviewResponseOverdueAuto.subject' => 'یادآوری درخواست داوری مقاله',
+      'emails.reviewResponseOverdueAuto.body' => '{$recipientName}:<br />
+
+این ایمیل که به صورت خودکار ارسال شده است، جهت یادآوری درخواست انجام داوری مقاله &quot;{$submissionTitle},&quot; برای مجله {$contextName}. است.
+<br />
+لطفاً به سامانه {$contextUrl} وارد شده و پذیرش یا عدم پذیرش انجام این داوری را به اطلاع برسانید<br />
+<br />
+مهلت انجام داوری: {$reviewDueDate}.<br />
+<br />
+چنانچه رمز ورود خود را فراموش کرده اید م یتوانید از لینک زیر برای بازیابی رمز ورود خود استفاده کنید:
+{$lostPasswordUrl}<br />
+<br />
+لینک مقاله: {$reviewAssignmentUrl}<br />
+<br />
+<br />
+{$contextSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}',
+      'emails.reviewRequestSubsequent.subject' => 'درخواست داوری مقاله',
+      'emails.reviewRequestSubsequent.body' => '{$recipientName}:<br />
+<br />
+شما به عنوان یک کارشناس ممتاز برای بررسی مقاله &quot;{$submissionTitle}&quot; که برای {$contextName} ارسال شده است انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید.<br />
+<br />
+لطفا قبل از تاریخ {$responseDueDate} وارد وب سایت مجله شده و مشخص سازید که آیا مایل به قبول کارشناسی هستید یا خیر؟ همچنین به طور همزمان می توانید به مقاله ارسالی دسترسی پیدا کرده و متن کارشناسی و توصیه های خودرا ذخیره کنید.<br />
+<br />
+چنانچه رمز عبور خود را فراموش کرده اید می توانید از لینک زیر به بازیابی رمز خود بپردازید: {$passwordLostUrl}
+<br/>
+ضمنا آخرین مهلت بررسی این مقاله تا تاریخ {$reviewDueDate} می باشد.<br />
+<br />
+آدرس مقاله: <a href="{$reviewAssignmentUrl}">{$reviewAssignmentUrl}</a><br />
+<br />
+از توجه شما به این درخواست متشکرم.<br />
+<br />
+{$signature}<br />
+<br />
+<br />
+--------------------------------<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+چکیده:<br />
+{$submissionAbstract}',
+      'emails.reviewCancel.subject' => 'درخواست لغو کارشناسی',
+      'emails.reviewCancel.body' => '{$recipientName}:<br />
+<br />
+در این مرحله تصمیم بر آن شده که درخواست کارشناسی مقاله ضضض مربوط به {$contextName} که به شما محول شده بود، لغو گردد. پیشاپیش از بابت ایجاد هرگونه مشکلی از شما عذرخواهی کرده و امیدواریم که در آینده بتوانیم طی مرحله کارشناسی با شما همکاری داشته باشیم.<br />
+<br />
+لطفا چنانچه در این رابطه سوالی دارید، با من تماس بگیرید.',
+      'emails.reviewDecline.subject' => 'قادر به داوری نمی باشم',
+      'emails.reviewDecline.body' => 'دبیر محترم:<br />
+<br />
+متاسفانه در حال حاضر قادر به داوری مقاله ارسالی &quot;{$submissionTitle}&quot;مربوط به {$contextName} نیستم.<br />
+از توجه شما متشکرم . در دفعات بعدی آماده همکاری با این مجله هستم.<br />
+<br />
+{$senderName}',
+      'emails.reviewRemind.subject' => 'یادآوری داوری مقاله ارسالی',
+      'emails.reviewRemind.body' => '{$recipientName}:<br />
+<br />
+این فقط یک یادآوری درخواست {$contextName} از شما جهت بررسی مقاله ارسالی &quot;{$submissionTitle}&quot;است. امیدوار بودیم که متن داوری شما تا تاریخ &amp;lt;{$reviewDueDate}&amp;gt; به مجله ارسال شده باشد و بسیار خوشحال خواهیم شد اگر هرچه زودتر بتوانید آنرا آماده کرده و نسبت به ارسال آن اقدام کنید.<br />
+<br />
+چنانچه نام کاربری و رمز عبور خود مربوط به وب سایت این مجله را در دسترس ندارید، می توانید از پیوند زیر جهت دوباره تنظیم کردن رمزعبور خود استفاده کنید (که به همراه نام کاربری برایتان ارسال می گردد).<br />
+<br />
+<a href="{$lostPasswordUrl}">{$lostPasswordUrl}</a><br />
+آدرس مقاله: <a href="{$reviewAssignmentUrl}">{$reviewAssignmentUrl}</a><br />
+<br />
+لطفا آمادگی خودرا نسبت به انجام این کمک مهم به مجله اعلام نمائید. منتظر پاسخ شما هستیم.<br />
+<br />
+{$signature}',
+      'emails.reviewRemindAuto.subject' => 'یادآوری اتوماتیک برای کارشناسی مقاله ارسالی',
+      'emails.reviewRemindAuto.body' => '{$recipientName}:<br />
+<br />
+این فقط یک یادآوری درخواست ما از شما جهت بررسی مقاله ارسالی &quot;{$submissionTitle}&quot;مربوط به {$contextName} است. امیدوار بودیم که متن کارشناسی شما تا تاریخ &amp;lt;{$reviewDueDate}&amp;gt; دریافت نماییم و به دلیل اتمام فرصت مقرر، این ایمیل به صورت اتوماتیک برای شما فرستاده می شود. بسیار خوشحال خواهیم شد اگر هرچه زودتر بتوانید نتیجه کارشناسی خود را برایمان ارسال کنید.<br />
+<br />
+چنانچه نام کاربری و رمز عبور خود مربوط به وب سایت این مجله را در دسترس ندارید می توانید از پیوند زیر جهت تنظیم دوباره رمزعبور خود استفاده کنید (که به همراه نام کاربری برایتان ارسال می گردد).<br />
+<br />
+<a href="{$lostPasswordUrl}">{$lostPasswordUrl}</a><br />
+آدرس مقاله: <a href="{$reviewAssignmentUrl}">{$reviewAssignmentUrl}</a><br />
+<br />
+لطفا آمادگی خودرا نسبت به انجام این کمک مهم به مجله اعلام نمائید. منتظر پاسخ شما هستم.<br />
+<br />
+{$contextSignature}',
+      'emails.editorDecisionAccept.subject' => 'تصمیم دبیر',
+      'emails.editorDecisionAccept.body' => '{$authors}:<br />
+<br />
+در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />
+<br />
+تصمیم نهایی: پذیرش مقاله ارسالی',
+      'emails.layoutRequest.subject' => 'نسخه های پیش از چاپ مورد نیاز است',
+      'emails.layoutRequest.body' => '{$recipientName}:<br />
+<br />
+از شما درخواست می شود که نسخه های پیش از چاپ مقاله &quot;{$submissionTitle}&quot; مربوط به {$contextName} را آماده نمایید.<br />
+<br />
+آدرس مقاله: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+نام کاربری: {$recipientUsername}<br />
+<br />
+چنانچه در حال حاضر قادر به انجام این امور نیستید و یا سوالی در این رابطه دارید با من تماس بگیرید. پیشاپیش از همکاری شما با این مجله سپاسگزارم.',
+      'emails.layoutComplete.subject' => 'نسخه های پیش از چاپ کامل شده است',
+      'emails.layoutComplete.body' => '{$recipientName}:<br />
+<br />
+نسخه های پیش از چاپ مقاله ضضض مربوط به {$contextName} حاضر شده و آماده بررسی نهایی می باشد.<br />
+لطفا چنانچه سوالی دارید، با من تماس بگیرید.<br />
+<br />
+<br />
+{$senderName}',
+      'emails.emailLink.subject' => 'شاید مایل به دیدن این مقاله باشید',
+      'emails.emailLink.body' => 'به نظر می رسد که شما مایل به ملاحظه مقاله {$authors}تحت عنوان &quot;{$submissionTitle}&quot; باشید. این مقاله در شماره &amp;lt;{$volume}&amp;gt; جلد &amp;lt;$number&amp;gt; سال &amp;lt;{$year}&amp;gt; {$contextName} به چاپ رسیده است.<br />
+<br />
+آدرس مقاله:<br />
+<a href="{$submissionUrl}">{$submissionUrl}</a>',
+      'emails.emailLink.description' => 'This email template provides a registered reader with the opportunity to send information about an article to somebody who may be interested. It is available via the Reading Tools and must be enabled by the Journal Manager in the Reading Tools Administration page.',
+      'emails.subscriptionNotify.subject' => 'اعلام اشتراک مجله',
+      'emails.subscriptionNotify.body' => '{$recipientName}:<br />
+<br />
+درحال حاضر شما به عنوان مشترک {$contextName}، با ویژگی های اشتراکی زیر در سامانه الکترونیکی مدیریت مجله ی ما ثبت نام شده اید:<br />
+<br />
+{$subscriptionType}<br />
+<br />
+به منظور دستیابی به محتویات که فقط برای مشترکان در دسترس می باشد، براحتی با استفاده از نام کاربری تان &amp;lt;{$recipientUsername}&amp;gt; در این سامانه واردشوید.<br />
+<br />
+بلافاصله پس از ورود به این سامانه، می توانید جزئیات اشتراک خود و رمز عبورتان را تغییر بدهید.<br />
+لطفا توجه کنید درصورتی که دارای اشتراک سازمانی باشید، نیازی به ورود به سیستم ندارید، زیرا این سامانه بصورت اتوماتیک درخواست های اشتراک را تایید می کند.<br />
+لطفا در صورت وجود سوال در این زمینه، با من تماس بگیرید.<br />
+<br />
+{$subscriptionSignature}',
+      'emails.openAccessNotify.subject' => 'اکنون مجله قابل دسترس است',
+      'emails.openAccessNotify.body' => 'خوانندگان گرامی:<br />
+<br />
+{$contextName}، شماره جاری خود را بصورت دسترسی آزاد (Open Access) در اختیار خوانندگان قرار داده است. از شما دعوت میگردد که پس از ملاحظه فهرست مقالات در ذیل این نامه، به منظور بررسی مقالات و موضوع های مورد علاقه، از وب سایت مجله دیدن فرمایید.<br />
+<br />
+از توجه همیشگی شما نسبت به این مجله متشکریم.<br />
+<br />
+آدرس وب سایت مجله: <a href="{$contextUrl}">{$contextUrl}</a><br />
+<br />
+{$contextSignature}',
+      'emails.subscriptionBeforeExpiry.subject' => 'یادآوری پایان یافتن مدت اشتراک',
+      'emails.subscriptionBeforeExpiry.body' => '{$recipientName}:<br />
+<br />
+اشتراک {$contextName} برای شما درحال اتمام می باشد.<br />
+<br />
+{$subscriptionType}<br />
+jhvdo hkrqh: {$expiryDate}<br />
+<br />
+به منظور اطمینان از دسترسی تان به این مجله، لطفا به وب سایت مجله مراجعه کرده و اشتراک خود را تمدید کنید. شما می توانید که با نام کاربری خود &amp;lt;نام کاربری&amp;gt; وارد این سامانه شوید.<br />
+<br />
+لطفا در صورت وجود سوال در این زمینه، با من تماس بگیرید.<br />
+<br />
+{$subscriptionSignature}',
+      'emails.subscriptionAfterExpiry.subject' => 'مدت اشتراک شما پایان یافته است',
+      'emails.subscriptionAfterExpiry.body' => '{$recipientName}:<br />
+<br />
+اشتراک {$contextName} برای شما به پایان رسیده است.<br />
+<br />
+{$subscriptionType}<br />
+تاریخ انقضاء: {$expiryDate}<br />
+<br />
+به منظور تجدید اشتراک خود، لطفا به وب سایت مجله مراجعه نمائید. شما قادر خواهید بود که با استفاده از نام کاربری خود &amp;lt;نام کاربری&amp;gt; وارد این سامانه شوید.<br />
+<br />
+لطفا در صورت وجود سوال در این زمینه، با من تماس بگیرید.<br />
+<br />
+{$subscriptionSignature}',
+      'emails.subscriptionAfterExpiryLast.subject' => 'اشتراک شما پایان یافت-آخرین یادآوری',
+      'emails.subscriptionAfterExpiryLast.body' => '{$recipientName}:<br />
+<br />
+اشتراک {$contextName} برای شما به پایان رسیده است.لطفا توجه کنید که این آخرین یادآوری است که برای شما ارسال خواهد شد.<br />
+<br />
+{$subscriptionType}<br />
+تاریخ انقضاء: {$expiryDate}<br />
+<br />
+به منظور تجدید اشتراک خود، لطفا به وب سایت مجله مراجعه نمائید. شما قادر خواهید بود که با استفاده از نام کاربری خود &amp;lt;نام کاربری&amp;gt; وارد شوید.<br />
+<br />
+لطفا در صورت وجود سوال در این زمینه، با من تماس بگیرید.<br />
+<br />
+{$subscriptionSignature}',
+      'emails.subscriptionPurchaseIndl.subject' => 'خرید اشتراک شخصی',
+      'emails.subscriptionPurchaseIndl.body' => 'An individual subscription has been purchased online for {$contextName} with the following details.<br />
+<br />
+Subscription Type:<br />
+{$subscriptionType}<br />
+<br />
+کاربر:<br />
+{$subscriberDetails}<br />
+<br />
+اطلاعات عضویت در صورت موجود بودن:<br />
+{$membership}<br />
+<br />
+برای دیدن یا ویرایش این اشتراک لطفا به آدرس زیر بروید.<br />
+<br />
+Subscription URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>',
+      'emails.subscriptionPurchaseInstl.subject' => 'خرید اشتراک سازمانی',
+      'emails.subscriptionPurchaseInstl.body' => 'An institutional subscription has been purchased online for {$contextName} with the following details. To activate this subscription, please use the provided Subscription URL and set the subscription status to \'Active\'.<br />
+<br />
+Subscription Type:<br />
+{$subscriptionType}<br />
+<br />
+Institution:<br />
+{$institutionName}<br />
+{$institutionMailingAddress}<br />
+<br />
+Domain (if provided):<br />
+{$domain}<br />
+<br />
+IP Ranges (if provided):<br />
+{$ipRanges}<br />
+<br />
+مسئول تماس:<br />
+{$subscriberDetails}<br />
+<br />
+اطلاعات عضویت در صورت وجود:<br />
+{$membership}<br />
+<br />
+برای مشاهده یا ویرایش این اشتراک به آدرس زیر بروید.<br />
+<br />
+آدرس اشتراک: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>',
+      'emails.subscriptionRenewIndl.subject' => 'تمدید اشتراک شخصی',
+      'emails.subscriptionRenewIndl.body' => 'An individual subscription has been renewed online for {$contextName} with the following details.<br />
+<br />
+Subscription Type:<br />
+{$subscriptionType}<br />
+<br />
+کاربر:<br />
+{$subscriberDetails}<br />
+<br />
+اطلاعات عضویت در صورت وجود:<br />
+{$membership}<br />
+<br />
+برای مشاهده یا ویرایش این اشتراک به آدرس زیر بروید.<br />
+<br />
+آدرس اشتراک: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>',
+      'emails.subscriptionRenewInstl.subject' => 'تمدید اشتراک سازمانی',
+      'emails.subscriptionRenewInstl.body' => 'یک اشتراک سازمانی بصورت آن لاین برای {$contextName} با اطلاعات زیر تمدید شد.<br />
+<br />
+نوع اشتراک:<br />
+{$subscriptionType}<br />
+<br />
+مؤسسه:<br />
+{$institutionName}<br />
+{$institutionMailingAddress}<br />
+<br />
+دامنه در صورت وجود:<br />
+{$domain}<br />
+<br />
+بازه IP در صورت وجود:<br />
+{$ipRanges}<br />
+<br />
+مسؤل تماس:<br />
+{$subscriberDetails}<br />
+<br />
+اطلاعات عضویت در صورت وجود:<br />
+{$membership}<br />
+<br />
+برای مشاهده و ویرایش این اشتراک، لطفا به آدرس زیر بروید.<br />
+<br />
+آدرس اشتراک: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>',
+      'emails.revisedVersionNotify.subject' => 'آپلود نسخه اصلاح شده',
+      'emails.revisedVersionNotify.body' => 'دبیر محترم:<br />
+<br />
+نسخه اصلاح شده مقاله &quot;{$submissionTitle}&quot; توسط {$submitterName} در سامانه آپلود شد..<br />
+<br />
+لینک مقاله: {$submissionUrl}<br />
+<br />
+{$signature}',
+    ),
+  ),
+);
