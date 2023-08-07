@@ -1,6 +1,5 @@
 data/*
 private_ojs/*
-from3.2-to-3.3/public_ojs/*
-from3.2-to-3.3/public_ojs/sql/*
-from3.2-to-3.3/cache/*
-from3.2-to-3.3/init-db/*
+from3.3-to-3.4/public_ojs/*
+from3.3-to-3.4/sql/*
+from3.3-to-3.4/init-db/*

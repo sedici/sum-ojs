@@ -29,6 +29,21 @@ Directorio dentro de los containers donde se alojarán los archivos SQL:
 DUMP_DIR=/var/backups
 
 
+PROJECT_NAME=ojs34
+
+#DATABASE
+DATABASE_NAME=ojs
+MYSQL_USER=ojs
+MYSQL_PASSWORD=ojspassword
+ROOT_PASSWORD=root
+
+#SQL
+DUMP_DIR=/var/backups
+DUMP_FILE=load-data.sql
+POST_DUMP_FILE=post-load-data.sql
+
+
+
 Como ejecutar una actualización desde la versión X a la versión Y:
 
 Ingresar al directorio from-X-to-Y:
@@ -57,22 +72,36 @@ cp from-X-to-Y/public_ojs/config.TEMPLATE.inc.php from-X-to-Y/public_ojs/config.
 
 - Editar el archivo config.inc.php generado en el paso previo, y colocar allí la configuración necesaria que OJS versión Y se ejecute desde el container docker:
 
+
+config.inc.php
+
+;;;;;;;;;;;;;;;;;;;;
+; General Settings ;
+;;;;;;;;;;;;;;;;;;;;
+
+[general]
+
+installed = On
 base_url = "http://localhost"
-You might also need to set override settings, such as:
-base_url[SOME_JOURNAL] = http://localhost/SOME_JOURNAL
+
+;;;;;;;;;;;;;;;;;;;;;
+; Database Settings ;
+;;;;;;;;;;;;;;;;;;;;;
 
 [database]
-
 driver = mysqli
-host =  mysql
-username = root
-password = <--- same as password set in .env
-name = <--- same as database set in .env
+host = mysql
+username = ojs
+password = ojspassword
+name = ojs
+
+;;;;;;;;;;;;;;;;;
+; File Settings ;
+;;;;;;;;;;;;;;;;;
 
 [files]
-files_dir = /var/ojs-data/uploads
+files_dir = /var/ojs-data
 public_files_dir = public
-
 
 
 Hasta aquí, se cuenta con un entorno de ejecución de OJS versión Y, y con una copia de la base de datos de OJS versión X. Ahora es hora de utilizar los scripts de automatización de tareas para regenerar la base de datos en versión X, así como también para ejecutar las migraciones:

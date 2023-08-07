@@ -1,7 +1,7 @@
 include .env
 
-from=3.2
-to=3.3
+from=3.3
+to=3.4
 
 export
 .PHONY: regenerate upgrade backup
