@@ -28,6 +28,7 @@ POST_DUMP_FILE=post-load-data-sql
 Directorio dentro de los containers donde se alojarán los archivos SQL:
 DUMP_DIR=/var/backups
 
+.env
 
 PROJECT_NAME=ojs34
 

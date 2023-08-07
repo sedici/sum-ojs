@@ -1,5 +1,5 @@
 data/*
-private_ojs/*
+private_ojs
 from3.3-to-3.4/public_ojs/*
-from3.3-to-3.4/sql/*
+from3.3-to-3.4/sql/load-data.sql
 from3.3-to-3.4/init-db/*
