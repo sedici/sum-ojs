@@ -1,0 +1,46 @@
+version: '3.7'
+services:
+  mysql:
+    image: mysql:5
+    container_name: ${PROJECT_NAME}_mysql
+    ports:
+     - "3306:3306"
+    volumes:
+      - ../data/mysql:/var/lib/mysql
+      - ./sql:/var/backups
+      - ./init-db:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ${DATABASE_NAME}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}  
+  phpmyadmin:
+    depends_on:
+      - mysql
+    image: phpmyadmin/phpmyadmin
+    container_name: ${PROJECT_NAME}_phpmyadmin
+    links:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+    ports: 
+      - '8080:80'
+  web:
+   #for OJS 3.3 and 3.2
+    image: webdevops/php-apache-dev:8.0
+    container_name: ${PROJECT_NAME}_web
+    depends_on:
+      - mysql
+    volumes:
+      - "./public_ojs:/app"
+      - "../private_ojs:/var/ojs-data/"
+    ports:
+      - "80:80"
+    environment:
+      PHP_MEMORY_LIMIT: 512M
+      PHP_DISPLAY_ERRORS: 1
+      POSTFIX_MYNETWORKS: host
+#    stdin_open: true
+#    tty: true
+    links:
+      - mysql
