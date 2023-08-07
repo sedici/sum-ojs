@@ -1,5 +1,5 @@
-data
-private_ojs
-from3.3-to-3.4/public_ojs
-from3.3-to-3.4/sql
+private_ojs/*
+from3.3-to-3.4/public_ojs/*
+from3.3-to-3.4/sql/*
 from3.3-to-3.4/init-db
+data
