@@ -2,9 +2,6 @@
 
 source .env
 
-#FROM_VERSION="3.1"
-#TO_VERSOIN="3.2"
-
 while getopts j:d:p:o:f:t: flag
 do
    echo $flag;
